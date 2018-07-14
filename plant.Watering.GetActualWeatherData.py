@@ -29,7 +29,7 @@ data = data.loc[data.stn == 'WAE',:]
 
 import pymysql.cursors
 
-connection = pymysql.connect(host = "mikmak.cc", user="sensor", passwd="Gaffe2017", db="weatherDW")
+connection = pymysql.connect(host = "localhost", user="sensor", passwd="Gaffe2017", db="weatherDW")
 #sql = ('SELECT MsgID, msgv1, TmStp FROM sysLog WHERE msgID = "109" AND sysID = "79cf6c22-dcc6-11e5-8e77-00113217113f"')
 
 query = ("CALL `writeWeatherLog`("+ "'" + "79cf6c22-dcc6-11e5-8e77-00113217113f" + "'"  + ","+ "'" 
